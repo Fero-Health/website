@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Use — Fero Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --blue: #006dff;
+        --blue-light: #e6eeff;
+        --navy: #0d1f35;
+        --ink: #0f1923;
+        --muted: #6b7c93;
+        --border: #dde5ee;
+        --bg: #ffffff;
+        --bg-tint: #f4f8fb;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          "DM Sans",
+          -apple-system,
+          sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .nav-wordmark {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        color: var(--navy);
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .nav-wordmark span {
+        color: var(--blue);
+      }
+      .nav-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .nav-back:hover {
+        color: var(--ink);
+      }
+      .nav-back svg {
+        width: 14px;
+        height: 14px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .doc-hero {
+        padding: 120px 40px 64px;
+        background: var(--bg-tint);
+        border-bottom: 1px solid var(--border);
+      }
+      .doc-hero-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .doc-label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--blue);
+        background: var(--blue-light);
+        padding: 4px 12px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+      .doc-title {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: clamp(34px, 4vw, 52px);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+        color: var(--navy);
+        margin-bottom: 16px;
+      }
+      .doc-meta {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .doc-meta strong {
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      .doc-wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 64px 40px 100px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 92px;
+      }
+      .toc-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+      .toc-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .toc-list a {
+        font-size: 13px;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+        display: block;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        border-left: 2px solid transparent;
+      }
+      .toc-list a:hover {
+        background: var(--bg-tint);
+        color: var(--ink);
+      }
+      .toc-list a.active {
+        color: var(--blue);
+        border-left-color: var(--blue);
+        background: var(--blue-light);
+      }
+
+      .doc-content {
+        min-width: 0;
+      }
+      .doc-section {
+        margin-bottom: 52px;
+        scroll-margin-top: 92px;
+      }
+      .doc-section h2 {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--navy);
+        margin-bottom: 14px;
+        line-height: 1.2;
+      }
+      .doc-section p {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 14px;
+      }
+      .doc-section p:last-child {
+        margin-bottom: 0;
+      }
+      .doc-section ul {
+        margin: 14px 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .doc-section ul li {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.7;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .doc-section ul li::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+        flex-shrink: 0;
+        margin-top: 8px;
+      }
+      .doc-section a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+      .doc-section a:hover {
+        text-decoration: underline;
+      }
+      .doc-section strong {
+        color: var(--navy);
+        font-weight: 600;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0 0 52px;
+      }
+
+      .doc-callout {
+        background: var(--blue-light);
+        border: 1px solid rgba(0, 109, 255, 0.15);
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin-bottom: 14px;
+      }
+      .doc-callout p {
+        color: var(--navy);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .doc-callout strong {
+        color: var(--blue);
+      }
+
+      .doc-warning {
+        background: #fff8ec;
+        border: 1px solid rgba(201, 146, 42, 0.25);
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin-bottom: 14px;
+      }
+      .doc-warning p {
+        color: #7a5500;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .contact-card {
+        background: var(--navy);
+        border-radius: 16px;
+        padding: 28px;
+      }
+      .contact-card p {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .contact-card a {
+        color: #7eb5ff;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .contact-card a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background: var(--ink);
+        padding: 36px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .footer-wordmark {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.35);
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .footer-wordmark span {
+        color: rgba(0, 109, 255, 0.65);
+      }
+      footer p {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.2);
+      }
+
+      @media (max-width: 760px) {
+        nav {
+          padding: 0 20px;
+        }
+        .doc-hero {
+          padding: 100px 20px 48px;
+        }
+        .doc-wrap {
+          grid-template-columns: 1fr;
+          padding: 40px 20px 72px;
+          gap: 0;
+        }
+        .toc {
+          display: none;
+        }
+        footer {
+          padding: 28px 20px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="nav-wordmark" href="fero-health.html"
+        >FERO <span>HEALTH</span></a
+      >
+      <a class="nav-back" href="fero-health.html">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" /></svg>
+        Back to home
+      </a>
+    </nav>
+
+    <div class="doc-hero">
+      <div class="doc-hero-inner">
+        <div class="doc-label">Legal</div>
+        <h1 class="doc-title">Terms of Use</h1>
+        <p class="doc-meta">
+          <strong>Last updated:</strong> June 2026 &nbsp;·&nbsp;
+          <strong>Effective:</strong> June 2026
+        </p>
+      </div>
+    </div>
+
+    <div class="doc-wrap">
+      <nav class="toc" aria-label="Page contents">
+        <div class="toc-label">Contents</div>
+        <ul class="toc-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#eligibility">Eligibility</a></li>
+          <li><a href="#account">Your account</a></li>
+          <li><a href="#health-disclaimer">Health disclaimer</a></li>
+          <li><a href="#acceptable-use">Acceptable use</a></li>
+          <li><a href="#ip">Intellectual property</a></li>
+          <li><a href="#third-parties">Third parties</a></li>
+          <li><a href="#liability">Liability</a></li>
+          <li><a href="#termination">Termination</a></li>
+          <li><a href="#governing-law">Governing law</a></li>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main class="doc-content">
+        <div class="doc-callout">
+          <p>
+            <strong>Plain English first.</strong> These terms govern your use of
+            Fero Health. We've tried to write them clearly. The health
+            disclaimer section is particularly important — please read it.
+            Questions? <a href="#contact">Get in touch.</a>
+          </p>
+        </div>
+
+        <div class="doc-section" id="overview">
+          <h2>Overview</h2>
+          <p>
+            These Terms of Use ("Terms") are a legal agreement between you and
+            Fero Health, Inc. ("Fero", "we", "us") governing your access to and
+            use of the Fero Health mobile application, website (ferohealth.com),
+            and any related services (collectively, the "Service").
+          </p>
+          <p>
+            By accessing or using the Service, you confirm that you have read,
+            understood, and agree to be bound by these Terms. If you do not
+            agree, do not use the Service.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="eligibility">
+          <h2>Eligibility</h2>
+          <p>
+            You must be at least 18 years old to use Fero. By using the Service,
+            you confirm that you are 18 or older and have the legal capacity to
+            enter into a binding agreement.
+          </p>
+          <p>
+            The Service is currently available to users in the United States. We
+            may expand availability over time. Use of the Service from
+            jurisdictions where it is not authorised is at your own risk and may
+            violate local laws.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="account">
+          <h2>Your account</h2>
+          <p>
+            To access certain features of the Service, you will need to create
+            an account. You agree to:
+          </p>
+          <ul>
+            <li>
+              Provide accurate, current, and complete information when
+              registering
+            </li>
+            <li>
+              Keep your login credentials secure and not share them with others
+            </li>
+            <li>
+              Notify us immediately if you suspect unauthorised access to your
+              account
+            </li>
+            <li>
+              Accept responsibility for all activity that occurs under your
+              account
+            </li>
+          </ul>
+          <p>
+            We reserve the right to suspend or terminate accounts that we
+            reasonably believe have been compromised or used in violation of
+            these Terms.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="health-disclaimer">
+          <h2>Health disclaimer</h2>
+          <div class="doc-warning">
+            <p>
+              <strong
+                >Fero is not a medical device and does not provide medical
+                advice.</strong
+              >
+              The information, scores, and recommendations provided through the
+              Service are for informational and educational purposes only. They
+              are not a substitute for professional medical advice, diagnosis,
+              or treatment.
+            </p>
+          </div>
+          <p>
+            Always consult a qualified healthcare provider — including a
+            urologist, endocrinologist, or reproductive specialist — before
+            making decisions about your fertility or health based on information
+            from Fero.
+          </p>
+          <p>
+            Fero does not diagnose medical conditions, prescribe treatments, or
+            replace clinical testing. If you have concerns about your fertility
+            or reproductive health, seek professional medical attention.
+          </p>
+          <p>
+            The Fero Score is a composite metric designed to help you understand
+            trends in your health data over time. It is not a clinical
+            diagnostic tool and should not be interpreted as such.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="acceptable-use">
+          <h2>Acceptable use</h2>
+          <p>
+            You agree to use the Service only for lawful purposes and in
+            accordance with these Terms. You must not:
+          </p>
+          <ul>
+            <li>
+              Use the Service in any way that violates applicable local,
+              national, or international law
+            </li>
+            <li>
+              Attempt to gain unauthorised access to any part of the Service or
+              its infrastructure
+            </li>
+            <li>
+              Reverse engineer, decompile, or disassemble any part of the
+              Service
+            </li>
+            <li>
+              Scrape, crawl, or systematically extract data from the Service
+            </li>
+            <li>
+              Upload or transmit viruses, malware, or any other harmful code
+            </li>
+            <li>Use the Service to harass, harm, or impersonate any person</li>
+            <li>
+              Misrepresent your identity or affiliation when using the Service
+            </li>
+          </ul>
+          <p>
+            We reserve the right to investigate and take appropriate action —
+            including account termination — against any user who violates these
+            provisions.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="ip">
+          <h2>Intellectual property</h2>
+          <p>
+            The Service and all its content — including but not limited to
+            software, text, graphics, logos, icons, and the Fero Score
+            methodology — are the property of Fero Health, Inc. and are
+            protected by applicable intellectual property laws.
+          </p>
+          <p>
+            You are granted a limited, non-exclusive, non-transferable licence
+            to access and use the Service for your personal, non-commercial use.
+            You may not reproduce, distribute, modify, or create derivative
+            works from any part of the Service without our prior written
+            consent.
+          </p>
+          <p>
+            You retain ownership of any health data you input into the Service.
+            By using the Service, you grant us a limited licence to process that
+            data solely to provide the Service to you, as described in our
+            <a href="privacy-policy.html">Privacy Policy</a>.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="third-parties">
+          <h2>Third-party services</h2>
+          <p>
+            The Service may integrate with or link to third-party services,
+            including wearable platforms such as Oura and Whoop. These
+            integrations are optional and subject to the terms and privacy
+            policies of those third parties.
+          </p>
+          <p>
+            Fero is not responsible for the content, accuracy, or practices of
+            any third-party service. Your use of third-party integrations is at
+            your own risk.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="liability">
+          <h2>Limitation of liability</h2>
+          <p>
+            To the fullest extent permitted by law, Fero Health, Inc. and its
+            officers, directors, employees, and agents shall not be liable for
+            any indirect, incidental, special, consequential, or punitive
+            damages arising from your use of — or inability to use — the
+            Service.
+          </p>
+          <p>
+            The Service is provided on an "as is" and "as available" basis
+            without warranties of any kind, either express or implied. We do not
+            warrant that the Service will be uninterrupted, error-free, or free
+            of harmful components.
+          </p>
+          <p>
+            Our total liability to you for any claim arising from these Terms or
+            your use of the Service shall not exceed the amount you paid us in
+            the twelve months preceding the claim, or $100, whichever is
+            greater.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="termination">
+          <h2>Termination</h2>
+          <p>
+            You may stop using the Service at any time and request deletion of
+            your account by contacting us at the address below.
+          </p>
+          <p>
+            We may suspend or terminate your access to the Service at any time,
+            with or without notice, if we reasonably believe you have violated
+            these Terms or if we discontinue the Service.
+          </p>
+          <p>
+            Upon termination, your right to use the Service ceases immediately.
+            Provisions of these Terms that by their nature should survive
+            termination — including intellectual property, disclaimer,
+            liability, and governing law sections — will continue to apply.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="governing-law">
+          <h2>Governing law</h2>
+          <p>
+            These Terms are governed by and construed in accordance with the
+            laws of the State of Delaware, United States, without regard to its
+            conflict of law principles.
+          </p>
+          <p>
+            Any disputes arising from these Terms or your use of the Service
+            shall be resolved through binding arbitration in Miami, Florida,
+            except that either party may seek injunctive relief in a court of
+            competent jurisdiction.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="changes">
+          <h2>Changes to these Terms</h2>
+          <p>
+            We may update these Terms from time to time. When we make material
+            changes, we will notify you by email and update the "Last updated"
+            date at the top of this page. Your continued use of the Service
+            after changes take effect constitutes your acceptance of the revised
+            Terms.
+          </p>
+          <p>
+            If you do not agree to the updated Terms, you must stop using the
+            Service and may request deletion of your account.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="contact">
+          <h2>Contact</h2>
+          <p>
+            If you have questions about these Terms or the Service, please
+            contact us:
+          </p>
+          <div class="contact-card">
+            <p>Fero Health, Inc. — Legal enquiries</p>
+            <a href="mailto:legal@ferohealth.com">legal@ferohealth.com</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <a class="footer-wordmark" href="fero-health.html"
+        >FERO <span>HEALTH</span></a
+      >
+      <p>© 2026 Fero Health, Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll(".doc-section");
+      const links = document.querySelectorAll(".toc-list a");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              links.forEach((l) => l.classList.remove("active"));
+              const active = document.querySelector(
+                `.toc-list a[href="#${entry.target.id}"]`,
+              );
+              if (active) active.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-20% 0px -70% 0px" },
+      );
+      sections.forEach((s) => observer.observe(s));
+    </script>
+  </body>
+</html>
