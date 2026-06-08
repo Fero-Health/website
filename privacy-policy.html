@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Fero Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --blue: #006dff;
+        --blue-light: #e6eeff;
+        --navy: #0d1f35;
+        --ink: #0f1923;
+        --muted: #6b7c93;
+        --border: #dde5ee;
+        --bg: #ffffff;
+        --bg-tint: #f4f8fb;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          "DM Sans",
+          -apple-system,
+          sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .nav-wordmark {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        color: var(--navy);
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .nav-wordmark span {
+        color: var(--blue);
+      }
+      .nav-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+      .nav-back:hover {
+        color: var(--ink);
+      }
+      .nav-back svg {
+        width: 14px;
+        height: 14px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* HERO */
+      .doc-hero {
+        padding: 120px 40px 64px;
+        background: var(--bg-tint);
+        border-bottom: 1px solid var(--border);
+      }
+      .doc-hero-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .doc-label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--blue);
+        background: var(--blue-light);
+        padding: 4px 12px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+      .doc-title {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: clamp(34px, 4vw, 52px);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+        color: var(--navy);
+        margin-bottom: 16px;
+      }
+      .doc-meta {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .doc-meta strong {
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      /* LAYOUT */
+      .doc-wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 64px 40px 100px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+
+      /* TOC */
+      .toc {
+        position: sticky;
+        top: 92px;
+      }
+      .toc-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+      .toc-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .toc-list a {
+        font-size: 13px;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 8px;
+        display: block;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        border-left: 2px solid transparent;
+      }
+      .toc-list a:hover {
+        background: var(--bg-tint);
+        color: var(--ink);
+      }
+      .toc-list a.active {
+        color: var(--blue);
+        border-left-color: var(--blue);
+        background: var(--blue-light);
+      }
+
+      /* CONTENT */
+      .doc-content {
+        min-width: 0;
+      }
+
+      .doc-section {
+        margin-bottom: 52px;
+        scroll-margin-top: 92px;
+      }
+
+      .doc-section h2 {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--navy);
+        margin-bottom: 14px;
+        line-height: 1.2;
+      }
+      .doc-section p {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 14px;
+      }
+      .doc-section p:last-child {
+        margin-bottom: 0;
+      }
+      .doc-section ul {
+        margin: 14px 0 14px 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .doc-section ul li {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.7;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .doc-section ul li::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+        flex-shrink: 0;
+        margin-top: 8px;
+      }
+      .doc-section a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+      .doc-section a:hover {
+        text-decoration: underline;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0 0 52px;
+      }
+
+      /* Highlight box */
+      .doc-callout {
+        background: var(--blue-light);
+        border: 1px solid rgba(0, 109, 255, 0.15);
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin-bottom: 14px;
+      }
+      .doc-callout p {
+        color: var(--navy);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .doc-callout strong {
+        color: var(--blue);
+      }
+
+      /* Contact card */
+      .contact-card {
+        background: var(--navy);
+        border-radius: 16px;
+        padding: 28px 28px;
+        margin-top: 14px;
+      }
+      .contact-card p {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .contact-card a {
+        color: #7eb5ff;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .contact-card a:hover {
+        text-decoration: underline;
+      }
+
+      /* FOOTER */
+      footer {
+        background: var(--ink);
+        padding: 36px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .footer-wordmark {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.35);
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .footer-wordmark span {
+        color: rgba(0, 109, 255, 0.65);
+      }
+      footer p {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 760px) {
+        nav {
+          padding: 0 20px;
+        }
+        .doc-hero {
+          padding: 100px 20px 48px;
+        }
+        .doc-wrap {
+          grid-template-columns: 1fr;
+          padding: 40px 20px 72px;
+          gap: 0;
+        }
+        .toc {
+          display: none;
+        }
+        footer {
+          padding: 28px 20px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="nav-wordmark" href="fero-health.html"
+        >FERO <span>HEALTH</span></a
+      >
+      <a class="nav-back" href="fero-health.html">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" /></svg>
+        Back to home
+      </a>
+    </nav>
+
+    <div class="doc-hero">
+      <div class="doc-hero-inner">
+        <div class="doc-label">Legal</div>
+        <h1 class="doc-title">Privacy Policy</h1>
+        <p class="doc-meta">
+          <strong>Last updated:</strong> June 2026 &nbsp;·&nbsp;
+          <strong>Effective:</strong> June 2026
+        </p>
+      </div>
+    </div>
+
+    <div class="doc-wrap">
+      <!-- TABLE OF CONTENTS -->
+      <nav class="toc" aria-label="Page contents">
+        <div class="toc-label">Contents</div>
+        <ul class="toc-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#data-we-collect">Data we collect</a></li>
+          <li><a href="#how-we-use">How we use it</a></li>
+          <li><a href="#sharing">Sharing</a></li>
+          <li><a href="#storage">Storage &amp; security</a></li>
+          <li><a href="#your-rights">Your rights</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CONTENT -->
+      <main class="doc-content">
+        <div class="doc-callout">
+          <p>
+            <strong>Plain English first.</strong> This policy explains what data
+            Fero Health collects, why we collect it, and how we protect it. We
+            handle health data — we take that seriously. If you have questions,
+            <a href="#contact">contact us directly</a>.
+          </p>
+        </div>
+
+        <div class="doc-section" id="overview">
+          <h2>Overview</h2>
+          <p>
+            Fero Health, Inc. ("Fero", "we", "us") operates the Fero Health
+            mobile application and website (ferohealth.com). This Privacy Policy
+            describes how we collect, use, store, and share your personal and
+            health information when you use our services.
+          </p>
+          <p>
+            By using Fero, you agree to the collection and use of information in
+            accordance with this policy. If you do not agree, please do not use
+            the app or website.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="data-we-collect">
+          <h2>Data we collect</h2>
+          <p>
+            We collect information you provide directly and information
+            generated through your use of the app.
+          </p>
+          <p><strong>Information you provide:</strong></p>
+          <ul>
+            <li>
+              Name and email address when you join the waitlist or create an
+              account
+            </li>
+            <li>
+              Health and fertility data you log manually — including semen
+              analysis results, hormone panel results, and lifestyle inputs
+              (sleep, alcohol, stress, diet, exercise)
+            </li>
+            <li>Communications you send to us (e.g. support emails)</li>
+          </ul>
+          <p><strong>Information collected automatically:</strong></p>
+          <ul>
+            <li>Device type, operating system, and app version</li>
+            <li>Usage data such as features accessed and session duration</li>
+            <li>Anonymised crash and error reports</li>
+          </ul>
+          <p><strong>Third-party integrations (optional):</strong></p>
+          <ul>
+            <li>
+              Wearable data from Oura or Whoop, if you choose to connect them —
+              only accessed with your explicit permission
+            </li>
+          </ul>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="how-we-use">
+          <h2>How we use your data</h2>
+          <p>We use your data only for the following purposes:</p>
+          <ul>
+            <li>To provide and improve the Fero app and its features</li>
+            <li>
+              To calculate your Fero Score and personalised recommendations
+            </li>
+            <li>
+              To send you product updates, early access communications, and
+              founder updates (you can unsubscribe at any time)
+            </li>
+            <li>
+              To conduct anonymised, aggregated research to improve our
+              scientific methodology
+            </li>
+            <li>To comply with legal obligations</li>
+          </ul>
+          <p>
+            We do not use your health data for advertising. We do not sell your
+            data. Ever.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="sharing">
+          <h2>Sharing your data</h2>
+          <p>
+            We do not sell, rent, or trade your personal or health data to third
+            parties. We share data only in limited circumstances:
+          </p>
+          <ul>
+            <li>
+              <strong>Service providers</strong> — trusted infrastructure
+              partners (e.g. cloud hosting, analytics) who process data on our
+              behalf under strict data processing agreements
+            </li>
+            <li>
+              <strong>Legal requirements</strong> — if required by law, court
+              order, or to protect the safety of our users
+            </li>
+            <li>
+              <strong>Business transfers</strong> — in the event of a merger or
+              acquisition, you will be notified before your data is transferred
+              or becomes subject to a different privacy policy
+            </li>
+          </ul>
+          <p>
+            Any third party we work with is contractually prohibited from using
+            your data for their own purposes.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="storage">
+          <h2>Storage &amp; security</h2>
+          <p>
+            Fero is HIPAA-compliant. Your health data is encrypted in transit
+            (TLS 1.2+) and at rest (AES-256). We follow industry best practices
+            for access control, monitoring, and incident response.
+          </p>
+          <p>
+            Your data is stored on servers located in the United States. If you
+            are based outside the US, please be aware that your data will be
+            transferred to and processed in the US in accordance with this
+            policy.
+          </p>
+          <p>
+            We retain your data for as long as your account is active or as
+            needed to provide services. You can request deletion at any time —
+            see Your Rights below.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="your-rights">
+          <h2>Your rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>
+              <strong>Access</strong> — request a copy of the personal data we
+              hold about you
+            </li>
+            <li>
+              <strong>Correction</strong> — request that inaccurate data be
+              corrected
+            </li>
+            <li>
+              <strong>Deletion</strong> — request that your data be deleted from
+              our systems
+            </li>
+            <li>
+              <strong>Portability</strong> — request your data in a structured,
+              machine-readable format
+            </li>
+            <li>
+              <strong>Opt-out</strong> — unsubscribe from marketing
+              communications at any time via the link in any email
+            </li>
+          </ul>
+          <p>
+            To exercise any of these rights, contact us at the address below. We
+            will respond within 30 days.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="children">
+          <h2>Children</h2>
+          <p>
+            Fero is not intended for use by anyone under the age of 18. We do
+            not knowingly collect personal information from minors. If you
+            believe a minor has provided us with personal data, please contact
+            us and we will delete it promptly.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="changes">
+          <h2>Changes to this policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. When we do, we
+            will update the "Last updated" date at the top of this page and
+            notify active users by email if the changes are material. Your
+            continued use of Fero after changes are posted constitutes
+            acceptance of the updated policy.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="doc-section" id="contact">
+          <h2>Contact</h2>
+          <p>
+            If you have questions about this policy or how we handle your data,
+            please reach out:
+          </p>
+          <div class="contact-card">
+            <p>Fero Health, Inc. — Privacy enquiries</p>
+            <a href="mailto:privacy@ferohealth.com">privacy@ferohealth.com</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <a class="footer-wordmark" href="fero-health.html"
+        >FERO <span>HEALTH</span></a
+      >
+      <p>© 2026 Fero Health, Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Highlight active TOC item on scroll
+      const sections = document.querySelectorAll(".doc-section");
+      const links = document.querySelectorAll(".toc-list a");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              links.forEach((l) => l.classList.remove("active"));
+              const active = document.querySelector(
+                `.toc-list a[href="#${entry.target.id}"]`,
+              );
+              if (active) active.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-20% 0px -70% 0px" },
+      );
+      sections.forEach((s) => observer.observe(s));
+    </script>
+  </body>
+</html>
